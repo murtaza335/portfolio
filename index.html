@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Murtaza — Portfolio</title>
+  <meta name="description" content="Muhammad Murtaza — CS student at NUST building full-stack apps, databases and microservices. Sportron, eSupport NUST, mzcache and more.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#home" aria-label="Home">mm<span>.</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a data-nav="home" href="#home">home</a></li>
+        <li><a data-nav="work" href="#work">work</a></li>
+        <li><a data-nav="projects" href="#projects">projects</a></li>
+        <li><a data-nav="articles" href="#articles">articles</a></li>
+        <li><a data-nav="about" href="#about">about</a></li>
+        <li><a data-nav="contact" href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="sec hero" id="home" data-nav="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Muhammad Murtaza · CS @ NUST</p>
+          <h1>Specializing too early often hinders growth</h1>
+          <p class="lead">I build across the stack — databases, backend services, web and mobile. Currently shipping the official NUST eSupport system and building my own Redis-style cache engine from scratch.</p>
+          <div class="btn-row">
+            <a class="btn btn-fill" href="#work">View work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><img src="assets/group9.svg" alt=""></div>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section class="sec" id="work" data-nav="work">
+      <div class="wrap">
+        <h2 class="h-big">featured work</h2>
+
+        <div class="featured">
+          <article class="card">
+            <p class="tag-row"><span class="tag">Next.js</span><span class="tag">Full-stack</span><span class="tag">NUST ICT</span></p>
+            <h3>eSupport NUST</h3>
+            <p>The official ticketing &amp; IT-support portal for the NUST ICT Directorate, used across the university.</p>
+            <p class="note">Live at <a href="https://esupport.nust.edu.pk" target="_blank" rel="noopener">esupport.nust.edu.pk</a> — reachable only on the NUST campus Wi-Fi.</p>
+            <div class="links">
+              <a href="https://esupport.nust.edu.pk" target="_blank" rel="noopener">Live site ↗</a>
+              <a href="https://github.com/murtaza335" target="_blank" rel="noopener">ict-frontend-next.js (private) ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="tag-row"><span class="tag">Mobile</span><span class="tag">Community</span><span class="tag">Google Play</span></p>
+            <h3>Sportron</h3>
+            <p>A sports community app for players to find games, connect and stay in the loop — live on Google Play.</p>
+            <div class="links">
+              <a href="https://github.com/murtaza335" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="card card-wide">
+            <p class="tag-row"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">MCP</span><span class="tag">Databases</span></p>
+            <h3>mzcache</h3>
+            <p>A Redis-inspired in-memory database built from scratch. The C++ engine handles TTL expiry, eviction policies and hash-based lookups over TCP; a Python client talks to it, and an MCP server lets AI assistants use it as a tool.</p>
+            <ul class="stack">
+              <li>
+                <a href="https://github.com/murtaza335/in-memory-cache-db-cpp" target="_blank" rel="noopener"><strong>Engine</strong> · in-memory-cache-db-cpp <em>C++</em> ↗</a>
+              </li>
+              <li>
+                <a href="https://github.com/murtaza335/mzcache-py" target="_blank" rel="noopener"><strong>Python client</strong> · mzcache-py <em>pip install mzcache</em> ↗</a>
+              </li>
+              <li>
+                <a href="https://github.com/murtaza335/mcp-mzcache" target="_blank" rel="noopener"><strong>MCP server</strong> · mcp-mzcache <em>Python</em> ↗</a>
+              </li>
+              <li>
+                <a href="https://github.com/murtaza335/simple-ecommerce-store" target="_blank" rel="noopener"><strong>Demo</strong> · simple-ecommerce-store <em>JavaScript</em> ↗</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL PROJECTS (rendered from script.js) -->
+    <section class="sec" id="projects" data-nav="projects">
+      <div class="wrap">
+        <h2 class="h-big">more projects</h2>
+        <p class="lead">A selection from my GitHub — everything is public unless noted.</p>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+        <div class="grid" id="project-grid"></div>
+        <noscript><p class="lead"><a class="link" href="https://github.com/murtaza335?tab=repositories">Browse all repositories on GitHub →</a></p></noscript>
+        <p class="more"><a class="link" href="https://github.com/murtaza335?tab=repositories" target="_blank" rel="noopener">See all repositories on GitHub →</a></p>
+      </div>
+    </section>
+
+    <!-- ARTICLES (coming soon) -->
+    <section class="sec" id="articles" data-nav="articles">
+      <div class="wrap articles-grid">
+        <h2 class="vtext" aria-label="Articles"><span aria-hidden="true">ARTICLES</span></h2>
+        <div class="articles">
+          <div class="soon">
+            <p class="soon-title">Coming soon</p>
+            <p class="soon-sub">I'm working on my first articles. Check back shortly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="sec" id="about" data-nav="about">
+      <div class="wrap about-grid">
+        <div>
+          <h2 class="h-big">about me</h2>
+          <p class="lead">I build across the stack, from databases and backend services to mobile apps. I'm studying computer science at NUST, with a focus on database systems, microservice architectures and system design.</p>
+          <p class="lead">Right now I'm building the official eSupport ticketing system for the NUST ICT Directorate, and researching how cloud microservices communicate with low latency and fault tolerance.</p>
+          <ul class="chips">
+            <li class="chip chip-fill">Full-stack</li>
+            <li class="chip">Mobile</li>
+            <li class="chip">Microservices</li>
+            <li class="chip">Databases</li>
+            <li class="chip">System design</li>
+          </ul>
+          <p class="skills"><strong>Languages</strong> C++, Python, Java, JavaScript, TypeScript, SQL<br>
+            <strong>Stack</strong> Next.js, React, Node.js, Express, PostgreSQL, MongoDB, Redis, Docker</p>
+        </div>
+        <div class="about-card">
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/75629054?v=4" alt="Muhammad Murtaza" width="400" height="400">
+          <h3>Muhammad Murtaza</h3>
+          <p>software developer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="sec" id="experience" data-nav="about">
+      <div class="wrap">
+        <h2 class="h-big">experience</h2>
+        <div class="rows">
+          <div class="row row-active">
+            <p class="row-period">Jun 2025 – Present</p>
+            <div><h3>ICT Directorate, NUST</h3><p>Building the university's official eSupport ticketing system.</p></div>
+          </div>
+          <div class="row">
+            <p class="row-period">Present</p>
+            <div><h3>VP Technical · Game Dev Club</h3><p>Leading the technical side of the NUST Game Development Club.</p></div>
+          </div>
+          <div class="row">
+            <p class="row-period">Present</p>
+            <div><h3>Team Lead Graphics · ACM</h3><p>Leading the graphics team of the ACM NUST Student Chapter.</p></div>
+          </div>
+          <div class="row">
+            <p class="row-period">2024 – 2025</p>
+            <div><h3>Social Media Manager</h3><p>ACM NUST Chapter and the NUST Archery Club.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec sec-contact" id="contact" data-nav="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 class="h-big">get in touch</h2>
+          <p class="lead">Have a project in mind, or just want to talk shop? My inbox is open.</p>
+          <p class="contact-links">
+            <a href="mailto:hello@yourname.dev">email</a>
+            <a href="https://github.com/murtaza335" target="_blank" rel="noopener">github</a>
+            <a href="#">linkedin</a>
+          </p>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="two">
+            <input class="field" type="text" name="name" placeholder="name" required aria-label="Your name">
+            <input class="field" type="email" name="email" placeholder="email" required aria-label="Your email">
+          </div>
+          <textarea class="field" name="message" rows="5" placeholder="message" required aria-label="Message"></textarea>
+          <button class="btn btn-fill" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Muhammad Murtaza</p>
+      <p><a href="https://github.com/murtaza335" target="_blank" rel="noopener">github.com/murtaza335</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
