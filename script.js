@@ -97,7 +97,7 @@
     e.preventDefault();
     var d = new FormData(form);
     var body = d.get('message') + '\n\n— ' + d.get('name') + ' (' + d.get('email') + ')';
-    window.location.href = 'mailto:hello@yourname.dev?subject=' +
+    window.location.href = 'mailto:murtazabaig335@gmail.com?subject=' +
       encodeURIComponent('Portfolio message from ' + d.get('name')) +
       '&body=' + encodeURIComponent(body);
   });
